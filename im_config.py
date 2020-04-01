@@ -19,28 +19,21 @@ def move_images(inputFolder, train, test, validate):
         
         # This takes only 100 of the images to be used for your training set
         if i < 70:
-            image = Image.open(filename)
-            imageLeft = image.crop((0, 0, 832, 832))
-            imageRight = image.crop((832, 0, 1664, 832))
-
-            imageLeft.save('{}/{}{}{}'.format(train, 'Image-', i+1,'(left).jpg'))
-            imageRight.save('{}/{}{}{}'.format(train, 'Image-', i+1, '(right).jpg'))
+            im_split(filename, train, i+1)
         elif i < 85:
-            image = Image.open(filename)
-            imageLeft = image.crop((0, 0, 832, 832))
-            imageRight = image.crop((832, 0, 1664, 832))
-
-            imageLeft.save('{}/{}{}{}'.format(test, 'Image-', i+1,'(left).jpg'))
-            imageRight.save('{}/{}{}{}'.format(test, 'Image-', i+1, '(right).jpg'))
+            im_split(filename, test, i+1)
         elif i < 100:
-            image = Image.open(filename)
-            imageLeft = image.crop((0, 0, 832, 832))
-            imageRight = image.crop((832, 0, 1664, 832))
-
-            imageLeft.save('{}/{}{}{}'.format(validate, 'Image-', i+1,'(left).jpg'))
-            imageRight.save('{}/{}{}{}'.format(validate, 'Image-', i+1, '(right).jpg'))
+            im_split(filename, validate, i+1)
         else:
             break
+
+def im_split(filename, destination, n):
+    image = Image.open(filename)
+    imageLeft = image.crop((0, 0, 832, 832))
+    imageRight = image.crop((832, 0, 1664, 832))
+
+    imageLeft.save('{}/{}{}{}'.format(destination, 'Image-', n,'(left).jpg'))
+    imageRight.save('{}/{}{}{}'.format(destination, 'Image-', n, '(right).jpg'))
 
 # Executes both the functions
 move_images(rawFolder, trainFolder, testFolder, validateFolder)
