@@ -16,4 +16,4 @@
 5. Configure the file with your correct folder and path locations
 6. Run the file using: `python im_config.py`
 
-# TO BE IMPROVED IN THE FUTURE
+# Addiitional Improvements to Come
