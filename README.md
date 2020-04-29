@@ -15,3 +15,5 @@
 4. Clone the repository to your local directory
 5. Configure the file with your correct folder and path locations
 6. Run the file using: `python im_config.py`
+
+# TO BE IMPROVED IN THE FUTURE
