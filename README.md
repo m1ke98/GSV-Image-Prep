@@ -4,6 +4,7 @@
 ## Prerequisites
  - [Python >=3.5](https://www.python.org/downloads/)
  - [Pillow](https://pillow.readthedocs.io/en/stable/installation.html#basic-installation)
+ - [Pathlib](https://docs.python.org/3/library/pathlib.html)
 ## Recommended
  - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 
@@ -16,4 +17,4 @@
 5. Configure the file with your correct folder and path locations
 6. Run the file using: `python im_config.py`
 
-# Additional Improvements to Come
+> Additional Improvements to Come
